@@ -269,7 +269,6 @@ def rearrange_inv(inp):
         for j in range(i, 16, 4):
             new_input[k] = inp[j]
             k+=1
-    #print(new_input)
     return new_input
 
 def get_blocks(text):
@@ -427,7 +426,7 @@ def decrypt_CFB(text, key, init_vector):
 
 def main():
     while True:
-        print("Data(skoka ugodno): ", end = '')
+        print("Plaintext: ", end = '')
         text = input()
         text_b = bytes.fromhex(text)
         text = text_b.decode("latin-1")
